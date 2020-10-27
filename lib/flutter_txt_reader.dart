@@ -19,13 +19,21 @@ class FlutterTxtReader extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return BlocProvider<IndexBloc>(
-      builder: (BuildContext context) => IndexBloc(),
+      create: (context) => IndexBloc(),
       child: BlocBuilder<IndexBloc, IndexState>(
         builder: (BuildContext context, state) {
           return _FlutterTextReadIndex();
         },
       ),
     );
+    // return BlocProvider<IndexBloc>(
+    //   builder: (BuildContext context) => IndexBloc(),
+    //   child: BlocBuilder<IndexBloc, IndexState>(
+    //     builder: (BuildContext context, state) {
+    //       return _FlutterTextReadIndex();
+    //     },
+    //   ),
+    // );
   }
 }
 

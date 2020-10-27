@@ -7,10 +7,13 @@ import 'package:flutter_txt_reader/model/index_db_base.dart';
 import './bloc.dart';
 
 class IndexBloc extends Bloc<IndexEvent, IndexState> {
-  @override
-  get initialState {
-    dispatch(InitDBEvent());
-    TextIndexState(readPage: 1);
+  // @override
+  // get initialState {
+  //   add(InitDBEvent());
+  //   TextIndexState(readPage: 1);
+  // }
+  IndexBloc() : super(TextIndexState(readPage: 1)) {
+    add(InitDBEvent());
   }
 
   @override
